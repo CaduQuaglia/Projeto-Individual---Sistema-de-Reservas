@@ -3,7 +3,7 @@ Desenvolvido em Node.js com PostgreSQL seguindo o modelo MVC
 
 Estrutura de Diretórios
 -----------------------
-
+<img src="./assets/estrutura-de-pastas.png"><br>
 * **`config/`**: Configurações do banco de dados e outras configurações do projeto.
 * **`controllers/`**: Controladores da aplicação (lógica de negócio).
 * **`models/`**: Modelos da aplicação (definições de dados e interações com o banco de dados).

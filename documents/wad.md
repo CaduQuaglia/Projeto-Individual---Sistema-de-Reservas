@@ -20,9 +20,9 @@
 
 # <a name="c1"></a>1. Introdução
 
-&nbsp;&nbsp;&nbsp;&nbsp; A  <br>
+### O projeto se trata de uma aplicação web utilizada por um hotel, "Carlos Hotel", para que hóspedes reservem quartos. O sistema gerencia os dados de todos os hóspedes assim como a disponibilidade e precificação dos quartos, garantindo que não ocorra conflito entre as reservas. <br>
+### A aplicação utiliza node.js, express.js seguindo o modelo MVC e PostgreSQL como banco de dados.
 
-&nbsp;&nbsp;&nbsp;&nbsp; A <br>
 
 # <a name="c2"></a>2. Modelo Relacional do Banco de Dados
 <img src="../assets/wad/modelo-banco.png"><br>
