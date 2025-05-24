@@ -1,16 +1,27 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const PORT = 3000;
 
-app.set('view engine', 'ejs'); // Define o EJS como engine de views
-app.set('views', __dirname + '/views'); // Define a pasta de views, se necessário
+// Configuração do EJS
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-// Middleware para processar JSON
+// Middlewares
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Rotas
-const routes = require('./routes/index');
-app.use('/', routes);
+// Rotas principais
+const reservasRoutes = require('./routes/reservas');
+const indexRoutes = require('./routes/index');
+
+app.use('/', indexRoutes);
+app.use('/reservas', reservasRoutes);
+
+// Redireciona a home para /reservas (opcional, se quiser que a home seja a lista de reservas)
+app.get('/', (req, res) => {
+  res.redirect('/reservas');
+});
 
 // Inicializa o servidor
 app.listen(PORT, () => {
